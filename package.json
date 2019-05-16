@@ -1,0 +1,11 @@
+{
+  "name": "gadoleague",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.7.4"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ricardo Lima <phpricardo@gmail.com>",
+  "license": "MIT"
+}

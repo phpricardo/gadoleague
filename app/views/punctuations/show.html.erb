@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @punctuation.description %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @punctuation.points %>
+</p>
+
+<%= link_to 'Edit', edit_punctuation_path(@punctuation) %> |
+<%= link_to 'Back', punctuations_path %>

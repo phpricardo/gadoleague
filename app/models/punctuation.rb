@@ -1,0 +1,2 @@
+class Punctuation < ApplicationRecord
+end

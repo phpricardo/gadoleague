@@ -1,0 +1,27 @@
+<%= form_with(model: punctuation, local: true) do |form| %>
+  <% if punctuation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(punctuation.errors.count, "error") %> prohibited this punctuation from being saved:</h2>
+
+      <ul>
+      <% punctuation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :points %>
+    <%= form.number_field :points %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Punctuations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Points</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @punctuations.each do |punctuation| %>
+      <tr>
+        <td><%= punctuation.description %></td>
+        <td><%= punctuation.points %></td>
+        <td><%= link_to 'Show', punctuation %></td>
+        <td><%= link_to 'Edit', edit_punctuation_path(punctuation) %></td>
+        <td><%= link_to 'Destroy', punctuation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Punctuation', new_punctuation_path %>
