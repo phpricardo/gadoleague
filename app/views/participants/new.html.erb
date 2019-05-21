@@ -1,5 +1,13 @@
-<h1>New Participant</h1>
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Create Participant
+      </h1>
+    </div>
+  </div>
+</section>
 
 <%= render 'form', participant: @participant %>
 
-<%= link_to 'Back', participants_path %>
+<%= link_to 'Back', participants_path, class: 'button is-light' %>

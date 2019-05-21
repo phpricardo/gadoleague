@@ -28,8 +28,8 @@ class ParticipantsController < ApplicationController
 
     respond_to do |format|
       if @participant.save
-        format.html { redirect_to @participant, notice: 'Participant was successfully created.' }
-        format.json { render :show, status: :created, location: @participant }
+        format.html { redirect_to root_path, notice: 'Participant was successfully created.' }
+        format.json { render :index, status: :created, location: @participant }
       else
         format.html { render :new }
         format.json { render json: @participant.errors, status: :unprocessable_entity }
@@ -45,7 +45,7 @@ class ParticipantsController < ApplicationController
         format.html { redirect_to @participant, notice: 'Participant was successfully updated.' }
         format.json { render :show, status: :ok, location: @participant }
       else
-        format.html { render :edit }
+        format.html { render :index }
         format.json { render json: @participant.errors, status: :unprocessable_entity }
       end
     end

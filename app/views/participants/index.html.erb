@@ -1,29 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Participants</h1>
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Participants
+      </h1>
+    </div>
+  </div>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name cattle</th>
-      <th>Score</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @participants.each do |participant| %>
+<div class="container">
+  <table class="table is-striped">
+    <thead>
       <tr>
-        <td><%= participant.name_cattle %></td>
-        <td><%= participant.score %></td>
-        <td><%= link_to 'Show', participant %></td>
-        <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
-        <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name cattle</th>
+        <th>Score</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @participants.each do |participant| %>
+        <tr>
+          <td><%= participant.name_cattle %></td>
+          <td><%= participant.score %></td>
+          <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+          <td><%= link_to 'Destroy', participant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Participant', new_participant_path %>
+  <%= link_to 'New Participant', new_participant_path, class: 'button is-primary' %>
+</div>
