@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+punctuations = [
+  ['Digital da Mulher no Celular', 15],
+  ['Senha do celular', 7],
+  ['Escrita de amor no contato do celular', 2],
+  ['Mulher ligar para amigo para falar com ele', 10],
+  ['Escrita de amor e icone de coração no contato', 3]
+]
+
+punctuations.each do |description, points|
+  Punctuation.create!(description: description, points: points)
+end
