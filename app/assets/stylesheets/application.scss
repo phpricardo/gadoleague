@@ -13,3 +13,9 @@
  *= require_self
  *= require main
  */
+
+ body {
+    background: {
+       image: asset_url("gadochampions.png");
+    }
+  }
